@@ -1,2 +1,2 @@
 # Yuppie
-Startup-Template
+Portfolio-Template
