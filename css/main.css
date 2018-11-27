@@ -29,12 +29,12 @@ body {
 
 a:link {
   text-decoration: none;
-  color: #555;
+  color: #666;
 }
 
 a:visited {
   text-decoration: none;
-  color: #555;
+  color: #666;
 }
 
 a:active {
@@ -234,7 +234,7 @@ ul.menu-left.collapse {
   margin-bottom: 0px;
   height: calc(100vh);
   text-align: center;
-  background-color: #fff;
+  background-color: #f4f4f4;
 }
 
 .heading {
@@ -364,17 +364,17 @@ ul.menu-left.collapse {
   }
 }
 .heading .animated-arrow:hover {
-  color: #555;
+  color: #666;
 }
 .heading .animated-arrow:hover > .the-arrow.-left > .shaft {
   width: 64px;
   transition-delay: 0.1s;
-  background-color: #555;
+  background-color: #666;
 }
 .heading .animated-arrow:hover > .the-arrow.-left > .shaft:before, .heading .animated-arrow:hover > .the-arrow.-left > .shaft:after {
   width: 8px;
   transition-delay: 0.1s;
-  background-color: #555;
+  background-color: #666;
 }
 .heading .animated-arrow:hover > .the-arrow.-left > .shaft:before {
   transform: rotate(40deg);
@@ -463,7 +463,7 @@ ul.menu-left.collapse {
     width: 60px;
   }
   .work-slide .carousel .carousel-control a:hover, .work-slide .carousel .carousel-control a:focus {
-    color: #555;
+    color: #666;
     opacity: 0.5;
   }
   .work-slide .carousel .carousel-control .carousel-control-next {
@@ -614,78 +614,21 @@ ul.menu-left.collapse {
  * # about styles
  *
  * ------------------------------------------------------------------- */
-.photo-me {
+.about-wrap {
+  background-color: #f4f4f4;
   margin: 0;
+  padding: 240px 40px 140px 40px;
   position: relative;
-  height: 400px;
-  background-color: #333745;
+  text-align: center;
 }
-.photo-me .heading1 {
-  margin-left: 0;
-  width: 80px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0;
-}
-.photo-me .heading1 h1 {
-  margin: 10px;
-  font-size: 2em;
-  color: #fff;
+.about-wrap h1 {
+  font-family: "Playfair Display", serif;
+  color: #000;
 }
 
 .about {
-  background-color: #fff;
-  margin-left: 70px;
-  position: relative;
-}
-.about .heading2 {
-  text-align: right;
-  width: 200px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotate(-270deg);
-  transform-origin: 0 0;
-}
-.about .heading2 p {
-  margin-top: 10px;
-}
-.about .heading2 h1 {
-  color: #333745;
-  font-size: 4em;
-}
-
-.smallHeader {
-  font-family: "Playfair Display", serif;
-  color: #000;
-  padding: 20px;
-}
-@media (min-width: 576px) {
-  .smallHeader {
-    margin: 0 50px 0 50px;
-  }
-}
-@media (min-width: 768px) {
-  .smallHeader {
-    margin: 0 100px 0 100px;
-  }
-}
-
-.about-wrap .bold {
-  font-weight: 800;
-  font-family: "Open Sans", sans-serif;
-}
-@media (min-width: 576px) {
-  .about-wrap {
-    margin: 0 50px 0 50px;
-  }
-}
-@media (min-width: 768px) {
-  .about-wrap {
-    margin: 0 100px 0 100px;
-  }
+  background-color: #f4f4f4;
+  margin-bottom: 120px;
 }
 
 /* ===================================================================
@@ -693,55 +636,14 @@ ul.menu-left.collapse {
  *
  * ------------------------------------------------------------------- */
 .works-wrap {
-  text-align: center;
   background-color: #fff;
-  margin: 0;
-}
-.works-wrap h2 {
-  background-color: #ffcd05;
-  font-family: "raiderfont";
-  font-size: 2.5em;
-  color: black;
-}
-@media (min-width: 576px) {
-  .works-wrap h2 {
-    width: 280px;
-  }
-}
-@media (min-width: 768px) {
-  .works-wrap {
-    padding: 0;
-  }
-  .works-wrap h2 {
-    font-size: 3em;
-  }
-}
-
-.works-wrap-two {
-  background-color: #fff;
-  padding: 40px 40px 40px 40px;
+  padding: 140px 40px 140px 40px;
   position: relative;
   text-align: center;
 }
-.works-wrap-two:before, .works-wrap-two:after {
-  content: "";
-  display: inline-block;
-  height: 1px;
-  border-top: 2px solid #ffcd05;
-  position: relative;
-  vertical-align: middle;
-  width: 50%;
-  top: -2px;
-}
-.works-wrap-two p {
+.works-wrap h1 {
   font-family: "Playfair Display", serif;
-  font-size: 0.8rem;
   color: #000;
-}
-@media (min-width: 768px) {
-  .works-wrap-two p {
-    font-size: 1em;
-  }
 }
 
 .row {
@@ -753,7 +655,7 @@ ul.menu-left.collapse {
   border-radius: 0;
   text-align: center;
   background-color: #fff;
-  margin: 100px 0 0 0;
+  padding: 100px 0 0 0;
 }
 .works-sec img {
   max-width: 100%;
@@ -846,74 +748,48 @@ ul.menu-left.collapse {
   transition-delay: 0.2s;
 }
 
-/* -------------------------------------------------------------------
-* ## contact button
-* ------------------------------------------------------------------- */
-/* ===================================================================
-* # skills styles
-*
-* ------------------------------------------------------------------- */
-.skills {
-  border-radius: 0;
-  text-align: center;
-  background-color: #1C1B20;
-  color: #515056;
-  padding: 5rem 0px;
-}
-.skills .skills-list {
-  padding: 60px 0px;
-}
-.skills .skills-list i {
-  font-size: 2em;
-  margin: 10px;
-}
-@media (min-width: 576px) {
-  .skills .skills-list i {
-    display: inline-block;
-    font-size: 2.5em;
-    margin: 30px;
-  }
-}
-@media (min-width: 992px) {
-  .skills .skills-list {
-    padding: 80px 40px;
-  }
-  .skills .skills-list i {
-    font-size: 3.5em;
-    margin: 35px;
-  }
-}
-
 /* ===================================================================
  * # footer
  *
  * ------------------------------------------------------------------- */
-.footer-sec {
-  border-radius: 0;
-  background-color: #fff;
+.footer {
+  padding: 120px 0 0 0;
+  background: #1C1B20;
+}
+.footer ul {
   margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0;
+  list-style: none;
 }
-.footer-sec i:hover {
-  color: #000;
+.footer .social {
+  color: black;
 }
-
-.footer-about {
-  margin-top: 10px;
-  font-family: "Open Sans", sans-serif;
+.footer li, .footer a {
+  color: #666;
+  font-family: "gligoth", sans-serif;
+  line-height: 24px;
+}
+.footer .title {
+  margin-bottom: 0.5rem;
   font-size: 1.2rem;
-  color: #000;
+  color: #ccc;
+  border-bottom: 1px solid #333;
 }
 
 .copyright {
-  color: #000;
-  padding: 20px;
+  font-size: 0.8em;
   margin: 20px;
+  min-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  color: #ccc;
 }
-.copyright a:hover {
-  text-decoration: line-through;
-  color: #000;
+
+@media screen and (max-width: 768px) {
+  .footer .col-sm-3 {
+    padding-bottom: 2rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
