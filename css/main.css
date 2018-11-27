@@ -24,31 +24,30 @@
 
 body {
   line-height: 1.6;
-  color: #fff;
   background-color: #f4f4f4;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-}
-a:hover {
-  color: #555;
 }
 
 a:link {
   text-decoration: none;
-  color: #000;
+  color: #555;
 }
 
 a:visited {
   text-decoration: none;
-  color: #000;
+  color: #555;
 }
 
 a:active {
   text-decoration: none;
   color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #f4f4f4;
+}
+a:hover {
+  color: #999;
 }
 
 h1 {
@@ -99,13 +98,6 @@ p {
 /* -------------------------------------------------------------------
  * ## main navigation
  * ------------------------------------------------------------------- */
-a {
-  text-decoration: none;
-}
-a:hover, a :focus {
-  color: #4d4d4d;
-}
-
 .menu-left a {
   display: inline-block;
   position: relative;
@@ -251,11 +243,21 @@ ul.menu-left.collapse {
   top: 35%;
   max-height: 700px;
   margin: 0px auto;
-  margin-left: 0;
+  padding: 0 30px 0 30px;
   text-align: left;
+}
+@media (min-width: 992px) {
+  .heading {
+    margin-left: 0;
+  }
 }
 .heading p {
   margin: 0;
+}
+@media (min-width: 992px) {
+  .heading p {
+    font-size: 1vw;
+  }
 }
 .heading .heading-text {
   margin-bottom: 25px;
@@ -263,6 +265,12 @@ ul.menu-left.collapse {
   font-size: 5em;
   display: block;
   padding: 0;
+}
+@media (min-width: 992px) {
+  .heading .heading-text {
+    font-size: 6.5vw;
+    margin-bottom: 55px;
+  }
 }
 @media (min-width: 768px) {
   .heading {
@@ -350,18 +358,23 @@ ul.menu-left.collapse {
   position: relative;
   transition: all 0.2s;
 }
+@media (min-width: 992px) {
+  .heading .animated-arrow {
+    font-size: 1.5vw;
+  }
+}
 .heading .animated-arrow:hover {
-  color: #eaeaea;
+  color: #555;
 }
 .heading .animated-arrow:hover > .the-arrow.-left > .shaft {
   width: 64px;
   transition-delay: 0.1s;
-  background-color: #eaeaea;
+  background-color: #555;
 }
 .heading .animated-arrow:hover > .the-arrow.-left > .shaft:before, .heading .animated-arrow:hover > .the-arrow.-left > .shaft:after {
   width: 8px;
   transition-delay: 0.1s;
-  background-color: #eaeaea;
+  background-color: #555;
 }
 .heading .animated-arrow:hover > .the-arrow.-left > .shaft:before {
   transform: rotate(40deg);
@@ -446,10 +459,11 @@ ul.menu-left.collapse {
     bottom: 0px;
   }
   .work-slide .carousel .carousel-control a {
+    color: #000;
     width: 60px;
   }
   .work-slide .carousel .carousel-control a:hover, .work-slide .carousel .carousel-control a:focus {
-    color: black;
+    color: #555;
     opacity: 0.5;
   }
   .work-slide .carousel .carousel-control .carousel-control-next {
@@ -475,123 +489,125 @@ ul.menu-left.collapse {
 }
 
 /* -------------------------------------------------------------------
- * ## socials
- * ------------------------------------------------------------------- */
+* ## socials
+* ------------------------------------------------------------------- */
+.socials {
+  display: block;
+  height: 70px;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
 @media (min-width: 992px) {
   .socials {
-    height: 70px;
     width: 130px;
-    position: absolute;
     left: 0;
     right: 0;
     margin: 0em 0em 0em 2em;
-    width: 0 auto;
-    bottom: 0px;
   }
+}
 
-  .hovicon {
-    position: absolute;
-    display: inline-block;
-    font-size: 13px;
-    line-height: 20px;
-    cursor: pointer;
-    margin: 10px;
-    border-radius: 50%;
-    text-align: center;
-    position: relative;
-    text-decoration: none;
-    z-index: 1;
-    color: #000;
-  }
+.hovicon {
+  position: absolute;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 20px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+}
 
-  .hovicon:after {
-    pointer-events: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    content: "";
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-  }
+.hovicon:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: "";
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
 
-  .hovicon:before {
-    speak: none;
-    font-size: 13px;
-    line-height: 60px;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    display: block;
-    -webkit-font-smoothing: antialiased;
-  }
+.hovicon:before {
+  speak: none;
+  font-size: 13px;
+  line-height: 60px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
 
-  /* Effect 4 */
-  .hovicon.effect-4 {
-    width: 20px;
-    height: 20px;
-    box-shadow: 0 0 0 2px black;
-  }
+/* Effect 4 */
+.hovicon.effect-4 {
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 0 0 2px black;
+}
 
-  .hovicon.effect-4:before {
-    line-height: 22px;
-  }
+.hovicon.effect-4:before {
+  line-height: 22px;
+}
 
-  .hovicon.effect-4:after {
-    top: -2px;
-    left: -2px;
-    padding: 0;
-    z-index: 10;
-    border: 2px dashed #000;
-  }
+.hovicon.effect-4:after {
+  top: -2px;
+  left: -2px;
+  padding: 0;
+  z-index: 10;
+  border: 2px dashed #000;
+}
 
-  .hovicon.effect-4:hover {
-    box-shadow: 0 0 0 0 black;
-    color: #000;
-  }
+.hovicon.effect-4:hover {
+  box-shadow: 0 0 0 0 black;
+  color: #000;
+}
 
-  .hovicon.effect-4:hover i {
-    color: #000;
-  }
+.hovicon.effect-4:hover i {
+  color: #000;
+}
 
-  /* Effect 4b */
-  .hovicon.effect-4:hover {
-    -webkit-transition: box-shadow 0.2s;
-    -moz-transition: box-shadow 0.2s;
-    transition: box-shadow 0.2s;
-  }
+/* Effect 4b */
+.hovicon.effect-4:hover {
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+}
 
-  .hovicon.effect-4:hover:after {
-    -webkit-animation: spinAround 9s linear infinite;
-    -moz-animation: spinAround 9s linear infinite;
-    animation: spinAround 9s linear infinite;
-  }
+.hovicon.effect-4:hover:after {
+  -webkit-animation: spinAround 9s linear infinite;
+  -moz-animation: spinAround 9s linear infinite;
+  animation: spinAround 9s linear infinite;
+}
 
-  @-webkit-keyframes spinAround {
-    from {
-      -webkit-transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-    }
+@-webkit-keyframes spinAround {
+  from {
+    -webkit-transform: rotate(0deg);
   }
-  @-moz-keyframes spinAround {
-    from {
-      -moz-transform: rotate(0deg);
-    }
-    to {
-      -moz-transform: rotate(360deg);
-    }
+  to {
+    -webkit-transform: rotate(360deg);
   }
-  @keyframes spinAround {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+}
+@-moz-keyframes spinAround {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 /* ===================================================================
