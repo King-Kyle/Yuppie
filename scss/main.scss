@@ -99,13 +99,14 @@
  * ## header logo
  * ------------------------------------------------------------------- */
  .header-logo {
-   background-color: black;
+   background-color: #BA1200;
    justify-content: center;
    align-items: center;
    padding: 0;
    width: 70px;
    height: 70px;
    display: flex;
+   border-radius: 100%;
    span {
      color: white;
      font-family: 'Playfair Display';
