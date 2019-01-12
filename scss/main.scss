@@ -557,6 +557,36 @@
    margin-bottom: 120px;
  }
 
+ /* ===================================================================
+  * # info styles
+  *
+  * ------------------------------------------------------------------- */
+
+  .info-wrap {
+    background-color: #f4f4f4;
+    margin: 0;
+    text-align: center;
+    img {
+      height: 350px;
+      width: auto;
+    }
+  }
+
+  .info {
+    text-align: center;
+    background-color: #f4f4f4;
+    margin-bottom: 120px;
+    h2 {
+      margin-bottom: 50px;
+    }
+    h3 {
+      margin-top: 50px;
+    }
+    ul {
+      list-style: none;
+    }
+  }
+
 
 
 /* ===================================================================

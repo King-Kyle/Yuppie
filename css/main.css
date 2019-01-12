@@ -528,6 +528,35 @@ ul.menu-left.collapse {
 }
 
 /* ===================================================================
+ * # info styles
+ *
+ * ------------------------------------------------------------------- */
+.info-wrap {
+  background-color: #f4f4f4;
+  margin: 0;
+  text-align: center;
+}
+.info-wrap img {
+  height: 350px;
+  width: auto;
+}
+
+.info {
+  text-align: center;
+  background-color: #f4f4f4;
+  margin-bottom: 120px;
+}
+.info h2 {
+  margin-bottom: 50px;
+}
+.info h3 {
+  margin-top: 50px;
+}
+.info ul {
+  list-style: none;
+}
+
+/* ===================================================================
  * # works styles
  *
  * ------------------------------------------------------------------- */
