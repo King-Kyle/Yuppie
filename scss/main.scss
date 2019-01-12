@@ -48,20 +48,16 @@
 
  a:link {
    text-decoration: none;
-   color: $darkGray;
+   color: $black;
  }
  a:visited {
-   text-decoration:none;
-   color: $darkGray;
- }
- a:active {
    text-decoration:none;
    color: $black;
  }
 
  a {
    text-decoration: none;
-   color: #f4f4f4;
+   color: $black;
    &:hover {
      color: $gray;
    }
@@ -142,12 +138,12 @@
      bottom: 0;
      height: 3px;
      width: 0;
-     background: #ffcd05;
+     background: #BA1200;
      transition: width .35s ease;
    }
    &:hover:before {
      width: 100%;
-     background: #ffcd05;
+     background: #BA1200;
      transition: width .35s ease;
    }
    &:hover:after {
@@ -474,7 +470,7 @@
           transform: translateY(-50%);
         }
         .carousel-control {
-          background-color: #fff;
+          background-color: transparent;
           font-family: 'gligoth', sans-serif;
           font-weight: 600;
           height: 70px;
@@ -485,11 +481,10 @@
           width: 0 auto;
           bottom: 0px;
           a {
-            color: $black;
+            color: #fff;
             width: 60px;
             &:hover,&:focus {
               color: $darkGray;
-              opacity: 0.5;
             }
           }
           .carousel-control-next {
@@ -528,106 +523,15 @@
     position: absolute;
     width: 100%;
     bottom: 0px;
+    i {
+      margin-right: 0.5em;
+      margin-top: 2em;
+    }
     @include media-breakpoint-up(lg) {
       width: 130px;
       left: 0;
       right: 0;
       margin: 0em 0em 0em 2em;
-    }
-  }
-  .hovicon {
-    position: absolute;
-    display: inline-block;
-    font-size: 13px;
-    line-height: 20px;
-    cursor: pointer;
-    margin: 10px;
-    border-radius: 50%;
-    text-align: center;
-    position: relative;
-    text-decoration: none;
-    z-index: 1;
-  }
-  .hovicon:after {
-    pointer-events: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    content:'';
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-  }
-  .hovicon:before {
-    speak: none;
-    font-size: 13px;
-    line-height: 60px;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    display: block;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* Effect 4 */
-  .hovicon.effect-4 {
-    width: 20px;
-    height: 20px;
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 1);
-  }
-  .hovicon.effect-4:before {
-    line-height: 22px;
-  }
-  .hovicon.effect-4:after {
-    top: -2px;
-    left: -2px;
-    padding: 0;
-    z-index: 10;
-    border: 2px dashed #000;
-  }
-  .hovicon.effect-4:hover {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-    color: #000;
-  }
-  .hovicon.effect-4:hover i {
-    color: #000;
-  }
-
-  /* Effect 4b */
-  .hovicon.effect-4:hover {
-    -webkit-transition: box-shadow 0.2s;
-    -moz-transition: box-shadow 0.2s;
-    transition: box-shadow 0.2s;
-  }
-  .hovicon.effect-4:hover:after {
-    -webkit-animation: spinAround 9s linear infinite;
-    -moz-animation: spinAround 9s linear infinite;
-    animation: spinAround 9s linear infinite;
-  }
-  @-webkit-keyframes spinAround {
-    from {
-      -webkit-transform: rotate(0deg)
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-  @-moz-keyframes spinAround {
-    from {
-      -moz-transform: rotate(0deg)
-    }
-    to {
-      -moz-transform: rotate(360deg);
-    }
-  }
-  @keyframes spinAround {
-    from {
-      transform: rotate(0deg)
-    }
-    to {
-      transform: rotate(360deg);
     }
   }
 
