@@ -112,7 +112,7 @@ p {
   background: #BA1200;
   transition: width 0.35s ease;
 }
-.menu-left a:hover:before {
+.menu-left a:hover:before, .menu-left a.active:before {
   width: 100%;
   background: #BA1200;
   transition: width 0.35s ease;

@@ -129,7 +129,7 @@
      background: #BA1200;
      transition: width .35s ease;
    }
-   &:hover:before {
+   &:hover:before, &.active:before {
      width: 100%;
      background: #BA1200;
      transition: width .35s ease;
