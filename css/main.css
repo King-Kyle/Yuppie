@@ -23,11 +23,6 @@ body {
   background-color: #f4f4f4;
 }
 
-a:link {
-  text-decoration: none;
-  color: #000;
-}
-
 a {
   text-decoration: none;
   color: #999;
@@ -434,6 +429,7 @@ ul.menu-left.collapse {
     transform: translateY(-50%);
   }
   .work-slide .carousel .carousel-control {
+    display: block;
     background-color: transparent;
     font-family: "gligoth", sans-serif;
     font-weight: 600;

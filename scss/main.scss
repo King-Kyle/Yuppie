@@ -38,11 +38,6 @@
    background-color: #f4f4f4;
  }
 
- a:link {
-   text-decoration: none;
-   color: $black;
- }
-
  a {
    text-decoration: none;
    color: $gray;
@@ -458,6 +453,7 @@
           transform: translateY(-50%);
         }
         .carousel-control {
+          display: block;
           background-color: transparent;
           font-family: 'gligoth', sans-serif;
           font-weight: 600;
