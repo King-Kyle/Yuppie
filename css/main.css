@@ -23,6 +23,10 @@ body {
   background-color: #f4f4f4;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 a {
   text-decoration: none;
   color: #999;
@@ -92,7 +96,7 @@ p {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 6px;
+  height: 3px;
   width: 0;
   transition: width 0s ease, background 0.35s ease;
 }
@@ -433,8 +437,8 @@ ul.menu-left.collapse {
     background-color: transparent;
     font-family: "gligoth", sans-serif;
     font-weight: 600;
-    height: 70px;
-    width: 150px;
+    height: 80px;
+    width: 70px;
     position: absolute;
     right: 0;
     margin: 0em 2em 0em 0em;
@@ -444,11 +448,13 @@ ul.menu-left.collapse {
   .work-slide .carousel .carousel-control a {
     color: #fff;
     width: 60px;
+    height: 25px;
   }
   .work-slide .carousel .carousel-control a:hover, .work-slide .carousel .carousel-control a:focus {
     color: #666;
   }
   .work-slide .carousel .carousel-control .carousel-control-next {
+    position: relative;
     opacity: 1;
   }
   .work-slide .carousel .carousel-control .carousel-control-next:after {
@@ -459,6 +465,7 @@ ul.menu-left.collapse {
     margin: 0 0 0 10px;
   }
   .work-slide .carousel .carousel-control .carousel-control-prev {
+    position: relative;
     opacity: 1;
   }
   .work-slide .carousel .carousel-control .carousel-control-prev:before {

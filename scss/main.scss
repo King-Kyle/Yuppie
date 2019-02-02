@@ -38,6 +38,10 @@
    background-color: #f4f4f4;
  }
 
+ a:link {
+   text-decoration: none;
+ }
+
  a {
    text-decoration: none;
    color: $gray;
@@ -109,7 +113,7 @@
      position: absolute;
      left: 0;
      bottom: 0;
-     height: 6px;
+     height: 3px;
      width: 0;
      transition: width 0s ease, background .35s ease;
    }
@@ -457,8 +461,8 @@
           background-color: transparent;
           font-family: 'gligoth', sans-serif;
           font-weight: 600;
-          height: 70px;
-          width: 150px;
+          height: 80px;
+          width: 70px;
           position: absolute;
           right: 0;
           margin: 0em 2em 0em 0em;
@@ -467,11 +471,13 @@
           a {
             color: #fff;
             width: 60px;
+            height: 25px;
             &:hover,&:focus {
               color: $darkGray;
             }
           }
           .carousel-control-next {
+            position: relative;
             opacity: 1;
             &:after {
               content: '';
@@ -482,6 +488,7 @@
             }
           }
           .carousel-control-prev {
+            position: relative;
             opacity: 1;
             &:before {
               content: '';
