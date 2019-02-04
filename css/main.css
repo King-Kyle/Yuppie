@@ -531,8 +531,13 @@ ul.menu-left.collapse {
   text-align: center;
 }
 .info-wrap img {
-  height: 350px;
+  height: 300px;
   width: auto;
+}
+@media (min-width: 768px) {
+  .info-wrap img {
+    height: 350px;
+  }
 }
 
 .info {
