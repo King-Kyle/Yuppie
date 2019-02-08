@@ -1,0 +1,129 @@
+/* ===================================================================
+* # works styles
+*
+* ------------------------------------------------------------------- */
+
+.works-wrap {
+  background-color: #fff;
+  padding: 140px 40px 140px 40px;
+  position: relative;
+  text-align: center;
+  h1 {
+    font-family: 'Playfair Display', serif;
+    color: #000;
+  }
+}
+
+.row {
+  text-align: center;
+}
+
+.works-sec {
+  color: #515056;
+  border-radius: 0;
+  text-align: center;
+  background-color: #fff;
+  padding: 100px 0 0 0;
+  img {
+    max-width: 100%;
+  }
+}
+
+.snip {
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0;
+  width: 100%;
+  color: #555;
+  font-size: 6px;
+
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    top: 100%;
+    content: '';
+    background-color: #1C1B20;
+    opacity: 0.9;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+  }
+
+  img {
+    backface-visibility: hidden;
+  }
+
+  figcaption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h5,p {
+    margin: 0;
+    opacity: 0;
+    letter-spacing: 1px;
+  }
+
+  p {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    padding: 5px 50px;
+
+  }
+
+  h5 {
+    font-weight: normal;
+    padding: 3px 10px;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+
+  &:hover:before {
+    top: 0px;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+
+  &:hover p, &:hover h5 {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &:hover p {
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+  }
+
+  &:hover h5 {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
+}

@@ -1,0 +1,148 @@
+/* ===================================================================
+* # header styles
+*
+* ------------------------------------------------------------------- */
+@import "../helpers/breakpoints";
+@import "../helpers/functions";
+@import "../helpers/variables";
+
+/* -------------------------------------------------------------------
+* ## header logo
+* ------------------------------------------------------------------- */
+.header-logo {
+  background-color: #BA1200;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  border-radius: 100%;
+  span {
+    color: white;
+    font-family: 'Playfair Display';
+    line-height: 0.9em;
+  }
+}
+
+/* -------------------------------------------------------------------
+* ## main navigation
+* ------------------------------------------------------------------- */
+
+// LINKS IN MENU HOVER EFFECT
+.menu-left a {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0px;
+  transition: color .35s ease;
+  &:before {
+    content: '';
+    display:block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    transition: width 0s ease, background .35s ease;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: #BA1200;
+    transition: width .35s ease;
+  }
+  &:hover:before, &.active:before {
+    width: 100%;
+    background: #BA1200;
+    transition: width .35s ease;
+  }
+  &:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: .5rem 0em 0em 0em;
+  background: transparent;
+  z-index: 3;
+  will-change: transform;
+  transition: background .3s,
+  -webkit-transform .5s cubic-bezier(.694,.048,.335,1);
+  transition: transform .5s cubic-bezier(.694,.048,.335,1),background .3s;
+  transition: transform .5s cubic-bezier(.694,.048,.335,1),background .3s,
+  -webkit-transform .5s cubic-bezier(.694,.048,.335,1);
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  @include media-breakpoint-up(lg) {
+    padding: 2em 2em 0em 2em;
+  }
+  nav {
+    margin: 0 auto;
+    .logo {
+      float: left;
+      &:after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+    }
+    ul {
+      float: right;
+      font-family: 'gligoth', sans-serif;
+      font-weight: 600;
+      list-style: none;
+      padding-left: 0;
+      margin: 11.1px 0;
+      li {
+        margin: 0.5em;
+        display: inline-block;
+        vertical-align: center;
+        @include media-breakpoint-up(md) {
+          margin-left: 3rem;
+        }
+        a {
+          display: block;
+          padding: 2px;
+        }
+      }
+    }
+  }
+}
+.hide-nav {
+  transform: translateY(-120%!important);
+  -webkit-transform: translateY(-120%)!important;
+}
+
+ul.menu-left {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  z-index: 10;
+  display: block!important;
+  float: right;
+  max-height: none;
+  &:before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  &.collapse {
+    max-height: 15em!important;
+  }
+}

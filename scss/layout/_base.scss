@@ -1,0 +1,53 @@
+/* ===================================================================
+* # base style overrides
+*
+* ------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "gligoth";
+  src: url(fonts/gligoth.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #999;;
+  &:hover {
+    color: #999;;
+  }
+}
+
+h1 {
+  font-family: 'Playfair Display';
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+h3,h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+p {
+  color: #515056;
+  letter-spacing: 0.1rem;
+  font-size: .85rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#site-content {
+  background-color: #fff;
+}

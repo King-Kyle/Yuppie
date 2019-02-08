@@ -1,0 +1,48 @@
+/* ===================================================================
+* # footer styles
+*
+* ------------------------------------------------------------------- */
+
+.footer {
+  padding: 120px 0 0 0;
+  background: #1C1B20;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .social {
+    color: black;
+  }
+
+  li, a {
+    color: #666;
+    font-family: 'gligoth', sans-serif;
+    line-height: 24px;
+  }
+
+  & .title {
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    color: #ccc;
+    border-bottom: 1px solid #333;
+  }
+}
+
+.copyright {
+  font-size: .8em;
+  margin: 20px;
+  min-height: 20px;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  color: #ccc;
+}
+
+@media screen and (max-width: 768px) {
+  .footer .col-sm-3 {
+    padding-bottom: 2rem;
+  }
+  
+}
