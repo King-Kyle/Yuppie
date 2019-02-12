@@ -46,11 +46,21 @@ function hasScrolled() {
 }
 
 /* ===================================================================
-* # SMOOTH SCROLL
+* # SMOOTH SCROLL & PRE-LOADER
 *
 * ------------------------------------------------------------------- */
 
 jQuery(document).ready(function($) {
+	//Preloader
+	$(window).on('load', function() {
+		preloaderFadeOutTime = 600;
+		function hidePreloader() {
+			var preloader = $('.spinner-wrapper');
+			preloader.fadeOut(preloaderFadeOutTime);
+		}
+		hidePreloader();
+	});
+	//Smoothscroll
 	$('.smoothscroll').on('click', function(e) {
 		e.preventDefault();
 
@@ -62,23 +72,6 @@ jQuery(document).ready(function($) {
 		}, 800, 'swing', function() {
 			window.location.hash = target;
 		});
-	});
-});
-
-/* ===================================================================
-* # PRE-LOADER
-*
-* ------------------------------------------------------------------- */
-
-$(document).ready(function() {
-	//Preloader
-	$(window).on('load', function() {
-		preloaderFadeOutTime = 600;
-		function hidePreloader() {
-			var preloader = $('.spinner-wrapper');
-			preloader.fadeOut(preloaderFadeOutTime);
-		}
-		hidePreloader();
 	});
 });
 
