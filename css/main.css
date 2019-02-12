@@ -240,6 +240,7 @@
 * ------------------------------------------------------------------- */
 .spinner-wrapper {
   position: fixed;
+  height: 100vh;
   top: 0;
   left: 0;
   right: 0;
@@ -252,8 +253,8 @@
   width: 100px;
   height: 100px;
   position: absolute;
-  top: 48%;
-  left: 48%;
+  top: 45%;
+  left: 45%;
   background-color: #bd1212;
   border-radius: 100%;
   -webkit-animation: sk-scaleout 1s infinite ease-in-out;
