@@ -52,14 +52,8 @@ function hasScrolled() {
 
 jQuery(document).ready(function($) {
 	//Preloader
-	$(window).on('load', function() {
-		preloaderFadeOutTime = 600;
-		function hidePreloader() {
-			var preloader = $('.spinner-wrapper');
-			preloader.fadeOut(preloaderFadeOutTime);
-		}
-		hidePreloader();
-	});
+	$('.spinner').fadeOut(); // will first fade out the loading animation
+	$('.spinner-wrapper').delay(600).fadeOut('slow'); // will fade out the white DIV that covers the website.
 	//Smoothscroll
 	$('.smoothscroll').on('click', function(e) {
 		e.preventDefault();
